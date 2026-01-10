@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meal Picker for the Week</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Pick Your Meals!</h1>
+      <p class="subtitle">Choose food for the week, then show your list.</p>
+    </header>
+
+    <main>
+      <section class="instructions" aria-live="polite">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Pick food from each section.</li>
+          <li>Tap <strong>Show My Meals</strong> when you are done.</li>
+          <li>Take a screenshot for your grown-up.</li>
+        </ol>
+      </section>
+
+      <section class="meal-section" data-group="favorites" data-limit="1">
+        <div class="section-title">
+          <h2>Main Dishes: Favorites</h2>
+          <p>Select <strong>one</strong> favorite.</p>
+        </div>
+        <div class="card-grid" id="favorites-grid"></div>
+      </section>
+
+      <section class="meal-section" data-group="others" data-limit="4">
+        <div class="section-title">
+          <h2>Main Dishes: Others</h2>
+          <p>Select up to <strong>four</strong>.</p>
+        </div>
+        <div class="card-grid" id="others-grid"></div>
+      </section>
+
+      <section class="meal-section" data-group="veggies" data-limit="3">
+        <div class="section-title">
+          <h2>Vegetables</h2>
+          <p>Select <strong>three</strong>.</p>
+        </div>
+        <div class="card-grid" id="veggies-grid"></div>
+      </section>
+
+      <section class="meal-section" data-group="fruits" data-limit="3" data-min="2">
+        <div class="section-title">
+          <h2>Fruits</h2>
+          <p>Select <strong>two or three</strong>.</p>
+        </div>
+        <div class="card-grid" id="fruits-grid"></div>
+      </section>
+
+      <section class="actions">
+        <button id="review-button" class="primary" disabled>Show My Meals</button>
+        <p id="status-message" class="status-message">Keep picking food!</p>
+      </section>
+
+      <section id="summary" class="summary" hidden>
+        <h2>Your Meals This Week</h2>
+        <div class="summary-columns">
+          <div>
+            <h3>Favorite</h3>
+            <ul id="summary-favorites"></ul>
+          </div>
+          <div>
+            <h3>Other Main Dishes</h3>
+            <ul id="summary-others"></ul>
+          </div>
+          <div>
+            <h3>Vegetables</h3>
+            <ul id="summary-veggies"></ul>
+          </div>
+          <div>
+            <h3>Fruits</h3>
+            <ul id="summary-fruits"></ul>
+          </div>
+        </div>
+        <button id="back-button" class="secondary">Go Back</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made for easy meal picking.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
