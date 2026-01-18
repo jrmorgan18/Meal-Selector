@@ -23,6 +23,7 @@ const mealData = {
       { name: "Peanut butter and jelly", image: "images/pbj.jpg", emoji: "🥪" },
       { name: "Burger", image: "images/burger.jpg", emoji: "🍔" },
       { name: "Pancake and sausage on stick", image: "images/pancake-sausage.jpg", emoji: "🥞" },
+      { name: "Ravioli", image: "images/ravioli.jpg", emoji: "🍝" },
     ],
   },
   veggies: {
